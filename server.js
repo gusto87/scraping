@@ -44,6 +44,7 @@ app.get("/", function(req, res) {
 
 app.get("/saved", function(req, res) {
     res.sendFile(path.join(__dirname, "public/savedArticles.html"));
+
 });
 
 // A GET route for scraping the echojs website
@@ -56,17 +57,20 @@ app.get("/scrape", function(req, res) {
     // Now, we grab every h2 within an article tag, and do the following:
 
         let counter = 0;
-        // var dataArr = [];
+        var dataArr = [];
+    
     $("article").each(function(i, element) {
+  //  console.log('each element', element)
       // Save an empty result object
       var result = {};
       
       var storyDiv = $(this).children("div.story-body")
       result.url = storyDiv.children("a").attr("href")
       var metaDiv = storyDiv.children("a").children("div.story-meta")
+      console.log('metaDiv?', metaDiv)
       result.headline = metaDiv.children("h2").text()
       result.summary = metaDiv.children("p.summary").text();
-
+      
       // Create a new Article using the `result` object built from scraping
      if (result.headline && result.url){
 
