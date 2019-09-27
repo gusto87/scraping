@@ -59,18 +59,17 @@ app.get("/scrape", function(req, res) {
         let counter = 0;
         var dataArr = [];
     
-    $("article").each(function(i, element) {
+    $('#stream-panel ol li').each(function(i, element) {
+      console
   //  console.log('each element', element)
       // Save an empty result object
       var result = {};
-      
-      var storyDiv = $(this).children("div.story-body")
-      result.url = storyDiv.children("a").attr("href")
-      var metaDiv = storyDiv.children("a").children("div.story-meta")
-      console.log('metaDiv?', metaDiv)
-      result.headline = metaDiv.children("h2").text()
-      result.summary = metaDiv.children("p.summary").text();
-      
+
+      result.url = $(this).find("a").attr("href");
+      result.headline = $(this).find("h2").text();
+      result.summary = $(this).find ("p").text();
+
+      console.log(result);
       // Create a new Article using the `result` object built from scraping
      if (result.headline && result.url){
 
@@ -91,11 +90,7 @@ app.get("/scrape", function(req, res) {
           
 
     });
-
-
-     
-    res.sendFile(path.join(__dirname, "public/index.html"));
-
+    res.redirect('/');
   });
 });
 
