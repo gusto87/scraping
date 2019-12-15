@@ -1,9 +1,6 @@
 
 #  News Article Scraper
-<style> div.par{
-    word-wrap: break-word;
-}
-</style>
+
 <hr>
 
 <b>Overview</b>
