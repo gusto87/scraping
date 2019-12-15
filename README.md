@@ -13,17 +13,17 @@ Check out the App
 
 Technologies Used
 <ul>
-Node.js
-Express.js
-Handlebars.js
-MongoDB
-Mongoose
-Bootstrap
-npm packages
-body-parser
-express
-express-handlebars
-mongoose
-cheerio
-request
+<li>Node.js</li>
+<li>Express.js</li>
+<li>Handlebars.js</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+<li>Bootstrap</li>
+<li>npm packages</li>
+<li>body-parser</li>
+<li>express</li>
+<li>express-handlebars</li>
+<li>mongoose</li>
+<li>cheerio</li>
+<li>request</li>
 </ul>
