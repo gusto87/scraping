@@ -65,7 +65,7 @@ app.get("/scrape", function(req, res) {
       // Save an empty result object
       var result = {};
 
-      result.url = $(this).find("a").attr("href");
+      result.url = $(this).find("a").attr("href");    
       result.headline = $(this).find("h2").text();
       result.summary = $(this).find ("p").text();
 
